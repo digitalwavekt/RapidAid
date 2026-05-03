@@ -1,0 +1,46 @@
+{
+  "expo": {
+    "name": "RapidAid",
+    "slug": "rapidaid",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/images/icon.png",
+    "userInterfaceStyle": "light",
+    "splash": {
+      "image": "./assets/images/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#DC2626"
+    },
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.rapidaid.app",
+      "buildNumber": "1.0.0"
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/images/adaptive-icon.png",
+        "backgroundColor": "#DC2626"
+      },
+      "package": "com.rapidaid.app",
+      "versionCode": 1,
+      "permissions": [
+        "CALL_PHONE",
+        "READ_PHONE_STATE"
+      ]
+    },
+    "web": {
+      "favicon": "./assets/images/favicon.png"
+    },
+    "plugins": [
+      [
+        "expo-av",
+        {
+          "microphonePermission": "Allow RapidAid to access your microphone for emergency voice guidance."
+        }
+      ]
+    ]
+  }
+}

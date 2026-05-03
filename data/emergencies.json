@@ -1,0 +1,424 @@
+{
+  "version": "1.0.0",
+  "lastUpdated": "2025-05-03",
+  "emergencies": [
+    {
+      "id": "heart-attack",
+      "title": {
+        "en": "Heart Attack",
+        "hi": "दिल का दौरा"
+      },
+      "category": "medical",
+      "severity": "critical",
+      "icon": "heart",
+      "symptoms": {
+        "en": [
+          "Severe chest pain or pressure",
+          "Pain radiating to left arm, jaw, or back",
+          "Shortness of breath",
+          "Cold sweat",
+          "Nausea or vomiting",
+          "Dizziness or lightheadedness"
+        ],
+        "hi": [
+          "छाती में तेज दर्द या दबाव",
+          "बाएं हाथ, जबड़े या पीठ में दर्द",
+          "सांस लेने में कठिनाई",
+          "ठंडा पसीना",
+          "मतली या उल्टी",
+          "चक्कर आना"
+        ]
+      },
+      "steps": [
+        {
+          "stepNo": 1,
+          "title": { "en": "Call Emergency Services", "hi": "आपातकालीन सेवाएं बुलाएं" },
+          "description": {
+            "en": "Dial 108 or 112 immediately. Do not wait to see if symptoms improve.",
+            "hi": "तुरंत 108 या 112 डायल करें। यह देखने का इंतजार न करें कि लक्षण बेहतर होंगे या नहीं।"
+          },
+          "image": "step1_call",
+          "audio": "heart_attack_step1.mp3",
+          "duration": 5
+        },
+        {
+          "stepNo": 2,
+          "title": { "en": "Make Patient Comfortable", "hi": "मरीज को आरामदायक बनाएं" },
+          "description": {
+            "en": "Have the person sit down in a comfortable position. Loosen tight clothing around neck and chest.",
+            "hi": "व्यक्ति को आरामदायक स्थिति में बैठाएं। गले और छाती के आसपास कसे कपड़े ढीले करें।"
+          },
+          "image": "step2_comfort",
+          "audio": "heart_attack_step2.mp3",
+          "duration": 5
+        },
+        {
+          "stepNo": 3,
+          "title": { "en": "Give Aspirin (if available)", "hi": "एस्पिरिन दें (अगर उपलब्ध हो)" },
+          "description": {
+            "en": "If the person is not allergic, give 325mg aspirin to chew. This helps prevent blood clotting.",
+            "hi": "अगर व्यक्ति को एलर्जी न हो, तो चबाने के लिए 325mg एस्पिरिन दें। यह रक्त के थक्के बनने से रोकता है।"
+          },
+          "image": "step3_aspirin",
+          "audio": "heart_attack_step3.mp3",
+          "duration": 7
+        },
+        {
+          "stepNo": 4,
+          "title": { "en": "Monitor Breathing", "hi": "सांस पर नजर रखें" },
+          "description": {
+            "en": "Watch for signs of breathing difficulty. If breathing stops, begin CPR immediately.",
+            "hi": "सांस लेने में कठिनाई के संकेत देखें। अगर सांस रुक जाए, तो तुरंत CPR शुरू करें।"
+          },
+          "image": "step4_breathing",
+          "audio": "heart_attack_step4.mp3",
+          "duration": 6
+        },
+        {
+          "stepNo": 5,
+          "title": { "en": "Stay Calm & Reassure", "hi": "शांत रहें और आश्वस्त करें" },
+          "description": {
+            "en": "Keep the person calm. Panic increases heart rate and worsens the condition. Stay with them until help arrives.",
+            "hi": "व्यक्ति को शांत रखें। घबराहट हृदय गति बढ़ाती है और स्थिति बिगाड़ती है। मदद आने तक उनके साथ रहें।"
+          },
+          "image": "step5_calm",
+          "audio": "heart_attack_step5.mp3",
+          "duration": 6
+        }
+      ],
+      "dos": {
+        "en": [
+          "Call 108/112 immediately",
+          "Keep patient sitting or semi-reclined",
+          "Give aspirin if not allergic",
+          "Loosen tight clothing",
+          "Stay with the person"
+        ],
+        "hi": [
+          "तुरंत 108/112 बुलाएं",
+          "मरीज को बैठे या अर्ध-सीधा रखें",
+          "अगर एलर्जी न हो तो एस्पिरिन दें",
+          "कसे कपड़े ढीले करें",
+          "व्यक्ति के साथ रहें"
+        ]
+      },
+      "donts": {
+        "en": [
+          "Do not give food or water",
+          "Do not let person walk or exert",
+          "Do not give medication other than aspirin",
+          "Do not leave person alone",
+          "Do not drive to hospital yourself"
+        ],
+        "hi": [
+          "खाना या पानी न दें",
+          "व्यक्ति को चलने या मेहनत न करने दें",
+          "एस्पिरिन के अलावा कोई दवा न दें",
+          "व्यक्ति को अकेला न छोड़ें",
+          "खुद अस्पताल न ले जाएं"
+        ]
+      },
+      "hospitalTransfer": {
+        "en": "Transfer to nearest hospital with cardiac care unit (CCU). Do NOT delay. Ambulance is preferred over private vehicle.",
+        "hi": "नजदीकी अस्पताल में हृदय देखभाल इकाई (CCU) ले जाएं। देरी न करें। निजी वाहन की बजाय एम्बुलेंस बेहतर है।"
+      },
+      "emergencyNumber": "108",
+      "estimatedTime": "5-10 minutes"
+    },
+    {
+      "id": "snake-bite",
+      "title": {
+        "en": "Snake Bite",
+        "hi": "सांप का काटना"
+      },
+      "category": "poisoning",
+      "severity": "critical",
+      "icon": "snake",
+      "symptoms": {
+        "en": [
+          "Two puncture marks on skin",
+          "Severe pain and swelling at bite site",
+          "Nausea and vomiting",
+          "Difficulty breathing",
+          "Blurred vision",
+          "Drooping eyelids",
+          "Bleeding from gums or nose"
+        ],
+        "hi": [
+          "त्वचा पर दो निशान",
+          "काटने की जगह पर तेज दर्द और सूजन",
+          "मतली और उल्टी",
+          "सांस लेने में कठिनाई",
+          "धुंधला दिखना",
+          "पलकें झुकना",
+          "मसूड़ों या नाक से खून बहना"
+        ]
+      },
+      "steps": [
+        {
+          "stepNo": 1,
+          "title": { "en": "Stay Calm & Immobilize", "hi": "शांत रहें और स्थिर रखें" },
+          "description": {
+            "en": "Keep the victim calm and still. Panic increases heart rate and venom spread. Lay them down.",
+            "hi": "पीड़ित को शांत और स्थिर रखें। घबराहट हृदय गति और जहर के प्रसार को बढ़ाती है। उन्हें लेटा दें।"
+          },
+          "image": "step1_calm",
+          "audio": "snake_bite_step1.mp3",
+          "duration": 5
+        },
+        {
+          "stepNo": 2,
+          "title": { "en": "Remove Constricting Items", "hi": "कसी हुई चीजें हटाएं" },
+          "description": {
+            "en": "Remove rings, watches, bangles, and tight clothing from the bitten limb before swelling begins.",
+            "hi": "सूजन शुरू होने से पहले कटे हुए अंग से अंगूठी, घड़ी, कंगन और कसे कपड़े हटा दें।"
+          },
+          "image": "step2_remove",
+          "audio": "snake_bite_step2.mp3",
+          "duration": 5
+        },
+        {
+          "stepNo": 3,
+          "title": { "en": "Keep Limb Below Heart Level", "hi": "अंग को दिल से नीचे रखें" },
+          "description": {
+            "en": "Keep the bitten limb immobilized and positioned below heart level to slow venom spread.",
+            "hi": "कटे हुए अंग को स्थिर रखें और दिल के स्तर से नीचे रखें ताकि जहर का प्रसार धीमा हो।"
+          },
+          "image": "step3_position",
+          "audio": "snake_bite_step3.mp3",
+          "duration": 5
+        },
+        {
+          "stepNo": 4,
+          "title": { "en": "Clean the Wound Gently", "hi": "घाव को धीरे से साफ करें" },
+          "description": {
+            "en": "Gently wash the bite area with soap and water. Do NOT cut, suck, or apply ice.",
+            "hi": "साबुन और पानी से काटने की जगह को धीरे से धोएं। काटें नहीं, चूसें नहीं, बर्फ न लगाएं।"
+          },
+          "image": "step4_clean",
+          "audio": "snake_bite_step4.mp3",
+          "duration": 6
+        },
+        {
+          "stepNo": 5,
+          "title": { "en": "Apply Pressure Bandage (if neurotoxic suspected)", "hi": "दबाव पट्टी लगाएं (अगर न्यूरोटॉक्सिक संदेह हो)" },
+          "description": {
+            "en": "Apply a firm pressure bandage over the bite site. Do NOT use a tight tourniquet.",
+            "hi": "काटने की जगह पर दृढ़ दबाव पट्टी लगाएं। कसी हुई टूर्निकेट का उपयोग न करें।"
+          },
+          "image": "step5_bandage",
+          "audio": "snake_bite_step5.mp3",
+          "duration": 7
+        },
+        {
+          "stepNo": 6,
+          "title": { "en": "Call Ambulance & Transport", "hi": "एम्बुलेंस बुलाएं और ले जाएं" },
+          "description": {
+            "en": "Dial 108 immediately. Transport to hospital with Anti-Snake Venom (ASV). Keep victim still during transport.",
+            "hi": "तुरंत 108 डायल करें। एंटी-स्नेक वेनम (ASV) वाले अस्पताल ले जाएं। परिवहन के दौरान पीड़ित को स्थिर रखें।"
+          },
+          "image": "step6_ambulance",
+          "audio": "snake_bite_step6.mp3",
+          "duration": 7
+        }
+      ],
+      "dos": {
+        "en": [
+          "Keep victim calm and still",
+          "Remove rings/watches before swelling",
+          "Keep limb below heart level",
+          "Clean wound gently with soap and water",
+          "Apply pressure bandage (not tourniquet)",
+          "Call 108 immediately",
+          "Note snake appearance (if safe)"
+        ],
+        "hi": [
+          "पीड़ित को शांत और स्थिर रखें",
+          "सूजन से पहले अंगूठी/घड़ी हटाएं",
+          "अंग को दिल के स्तर से नीचे रखें",
+          "साबुन और पानी से घाव साफ करें",
+          "दबाव पट्टी लगाएं (टूर्निकेट नहीं)",
+          "तुरंत 108 बुलाएं",
+          "सांप का रूप नोट करें (अगर सुरक्षित हो)"
+        ]
+      },
+      "donts": {
+        "en": [
+          "Do NOT cut or suck the wound",
+          "Do NOT apply tight tourniquet",
+          "Do NOT use ice or heat",
+          "Do NOT give alcohol or food",
+          "Do NOT let victim walk",
+          "Do NOT try to catch or kill the snake",
+          "Do NOT apply herbs or chemicals"
+        ],
+        "hi": [
+          "घाव को न काटें न चूसें",
+          "कसी टूर्निकेट न लगाएं",
+          "बर्फ या गर्मी न लगाएं",
+          "शराब या खाना न दें",
+          "पीड़ित को चलने न दें",
+          "सांप को पकड़ने या मारने की कोशिश न करें",
+          "जड़ी-बूटी या रसायन न लगाएं"
+        ]
+      },
+      "hospitalTransfer": {
+        "en": "Rush to nearest hospital with Anti-Snake Venom (ASV) facility. Do NOT delay. Keep victim immobilized during transport. Call 108 for ambulance.",
+        "hi": "नजदीकी ASV सुविधा वाले अस्पताल तुरंत ले जाएं। देरी न करें। परिवहन के दौरान पीड़ित को स्थिर रखें। एम्बुलेंस के लिए 108 बुलाएं।"
+      },
+      "emergencyNumber": "108",
+      "estimatedTime": "15-30 minutes"
+    },
+    {
+      "id": "drowning",
+      "title": {
+        "en": "Drowning / Near-Drowning",
+        "hi": "डूबना / लगभग डूबना"
+      },
+      "category": "water",
+      "severity": "critical",
+      "icon": "water",
+      "symptoms": {
+        "en": [
+          "Unconsciousness",
+          "Not breathing or gasping",
+          "Blue lips or fingernails",
+          "Vomiting water",
+          "Cold and pale skin",
+          "No pulse"
+        ],
+        "hi": [
+          "बेहोशी",
+          "सांस न लेना या हांफना",
+          "नीले होंठ या नाखून",
+          "पानी उल्टी करना",
+          "ठंडी और पीली त्वचा",
+          "नब्ज नहीं"
+        ]
+      },
+      "steps": [
+        {
+          "stepNo": 1,
+          "title": { "en": "Ensure Your Safety First", "hi": "पहले अपनी सुरक्षा सुनिश्चित करें" },
+          "description": {
+            "en": "Do NOT enter dangerous water. Use a rope, pole, or flotation device to reach the victim. Call for help.",
+            "hi": "खतरनाक पानी में न उतरें। रस्सी, डंडा या तैरने वाली चीज का उपयोग करें। मदद के लिए पुकारें।"
+          },
+          "image": "step1_safety",
+          "audio": "drowning_step1.mp3",
+          "duration": 6
+        },
+        {
+          "stepNo": 2,
+          "title": { "en": "Pull Victim from Water", "hi": "पीड़ित को पानी से बाहर निकालें" },
+          "description": {
+            "en": "Pull the person out of water carefully. Support their head and neck. Lay them on their back on a flat surface.",
+            "hi": "व्यक्ति को सावधानी से पानी से बाहर निकालें। उनके सिर और गर्दन को सहारा दें। सपाट सतह पर पीठ के बल लेटाएं।"
+          },
+          "image": "step2_pull",
+          "audio": "drowning_step2.mp3",
+          "duration": 6
+        },
+        {
+          "stepNo": 3,
+          "title": { "en": "Check for Breathing & Pulse", "hi": "सांस और नब्ज जांचें" },
+          "description": {
+            "en": "Check if the person is breathing. Look for chest rise, listen for breath sounds, feel for pulse on neck.",
+            "hi": "जांचें कि व्यक्ति सांस ले रहा है या नहीं। छाती के उठने को देखें, सांस की आवाज सुनें, गर्दन पर नब्ज महसूस करें।"
+          },
+          "image": "step3_check",
+          "audio": "drowning_step3.mp3",
+          "duration": 7
+        },
+        {
+          "stepNo": 4,
+          "title": { "en": "Begin CPR if No Breathing", "hi": "अगर सांस न हो तो CPR शुरू करें" },
+          "description": {
+            "en": "If not breathing, start CPR. Give 30 chest compressions followed by 2 rescue breaths. Continue until help arrives.",
+            "hi": "अगर सांस न हो, तो CPR शुरू करें। 30 छाती संपीडन और 2 बचाव सांस दें। मदद आने तक जारी रखें।"
+          },
+          "image": "step4_cpr",
+          "audio": "drowning_step4.mp3",
+          "duration": 8
+        },
+        {
+          "stepNo": 5,
+          "title": { "en": "Clear Airways & Recovery Position", "hi": "वायुमार्ग साफ करें और रिकवरी स्थिति" },
+          "description": {
+            "en": "If breathing resumes, place in recovery position (on side). Monitor continuously. Keep warm with blanket.",
+            "hi": "अगर सांस वापस आए, तो रिकवरी स्थिति (किनारे की ओर) में रखें। लगातार निगरानी करें। कंबल से गर्म रखें।"
+          },
+          "image": "step5_recovery",
+          "audio": "drowning_step5.mp3",
+          "duration": 7
+        },
+        {
+          "stepNo": 6,
+          "title": { "en": "Call Ambulance & Monitor", "hi": "एम्बुलेंस बुलाएं और निगरानी करें" },
+          "description": {
+            "en": "Dial 108 immediately. Even if person revives, hospital monitoring is essential. Secondary drowning can occur hours later.",
+            "hi": "तुरंत 108 डायल करें। भले ही व्यक्ति होश में आ जाए, अस्पताल की निगरानी जरूरी है। सेकेंडरी डूबना घंटों बाद हो सकता है।"
+          },
+          "image": "step6_monitor",
+          "audio": "drowning_step6.mp3",
+          "duration": 8
+        }
+      ],
+      "dos": {
+        "en": [
+          "Ensure your own safety first",
+          "Pull victim out carefully",
+          "Check breathing and pulse immediately",
+          "Start CPR if needed",
+          "Place in recovery position if breathing resumes",
+          "Call 108 immediately",
+          "Keep victim warm"
+        ],
+        "hi": [
+          "पहले अपनी सुरक्षा सुनिश्चित करें",
+          "पीड़ित को सावधानी से बाहर निकालें",
+          "तुरंत सांस और नब्ज जांचें",
+          "जरूरत हो तो CPR शुरू करें",
+          "अगर सांस वापस आए तो रिकवरी स्थिति में रखें",
+          "तुरंत 108 बुलाएं",
+          "पीड़ित को गर्म रखें"
+        ]
+      },
+      "donts": {
+        "en": [
+          "Do NOT enter dangerous water to rescue",
+          "Do NOT waste time removing wet clothes",
+          "Do NOT give food or water",
+          "Do NOT leave person unattended",
+          "Do NOT assume person is fine if they revive",
+          "Do NOT perform abdominal thrusts (Heimlich)"
+        ],
+        "hi": [
+          "बचाव के लिए खतरनाक पानी में न उतरें",
+          "गीले कपड़े हटाने में समय न बर्बाद करें",
+          "खाना या पानी न दें",
+          "व्यक्ति को अकेला न छोड़ें",
+          "अगर होश में आए तो ठीक मानने की गलती न करें",
+          "पेट पर दबाव न डालें (हाइमलिच)"
+        ]
+      },
+      "hospitalTransfer": {
+        "en": "ALL drowning victims need hospital evaluation. Secondary drowning (fluid in lungs) can occur up to 24 hours later. Call 108 for ambulance.",
+        "hi": "सभी डूबने के पीड़ितों को अस्पताल की जांच चाहिए। सेकेंडरी डूबना (फेफड़ों में तरल) 24 घंटे बाद भी हो सकता है। एम्बुलेंस के लिए 108 बुलाएं।"
+      },
+      "emergencyNumber": "108",
+      "estimatedTime": "Immediate"
+    }
+  ],
+  "categories": [
+    { "id": "medical", "name": { "en": "Medical", "hi": "चिकित्सा" }, "icon": "medical-bag", "color": "#DC2626" },
+    { "id": "accident", "name": { "en": "Accident & Injury", "hi": "दुर्घटना और चोट" }, "icon": "car-emergency", "color": "#F59E0B" },
+    { "id": "water", "name": { "en": "Water Emergency", "hi": "जल आपातकाल" }, "icon": "waves", "color": "#3B82F6" },
+    { "id": "burn", "name": { "en": "Burn & Chemical", "hi": "जलना और रसायन" }, "icon": "fire", "color": "#EF4444" },
+    { "id": "poisoning", "name": { "en": "Poisoning & Gas", "hi": "जहर और गैस" }, "icon": "skull-crossbones", "color": "#7C3AED" },
+    { "id": "women-child", "name": { "en": "Women & Child", "hi": "महिला और बच्चा" }, "icon": "baby-face", "color": "#EC4899" },
+    { "id": "environmental", "name": { "en": "Environmental", "hi": "पर्यावरण" }, "icon": "sun-thermometer", "color": "#F97316" },
+    { "id": "disaster", "name": { "en": "Disaster", "hi": "आपदा" }, "icon": "alert-octagon", "color": "#1F2937" },
+    { "id": "special", "name": { "en": "Special Cases", "hi": "विशेष मामले" }, "icon": "shield-alert", "color": "#059669" }
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "india": [
+    { "name": "Ambulance", "number": "108", "icon": "ambulance", "color": "#DC2626", "description": "Free government ambulance service" },
+    { "name": "Emergency Number", "number": "112", "icon": "phone-alert", "color": "#DC2626", "description": "Single emergency number (Police, Fire, Ambulance)" },
+    { "name": "Police", "number": "100", "icon": "police-badge", "color": "#1D4ED8", "description": "Police emergency helpline" },
+    { "name": "Fire", "number": "101", "icon": "fire-truck", "color": "#EA580C", "description": "Fire emergency services" },
+    { "name": "Women Helpline", "number": "181", "icon": "shield-account", "color": "#DB2777", "description": "Women in distress helpline" },
+    { "name": "Child Helpline", "number": "1098", "icon": "baby-face", "color": "#7C3AED", "description": "Child emergency helpline" },
+    { "name": "Suicide Prevention", "number": "9152987821", "icon": "heart-pulse", "color": "#059669", "description": "Kiran Mental Health Helpline" },
+    { "name": "Disaster Management", "number": "1078", "icon": "alert-octagon", "color": "#1F2937", "description": "State disaster management" },
+    { "name": "Road Accident", "number": "1073", "icon": "car-emergency", "color": "#F59E0B", "description": "Highway accident helpline" },
+    { "name": "Senior Citizen Helpline", "number": "14567", "icon": "account-heart", "color": "#0891B2", "description": "Elderly care helpline" }
+  ]
+}
