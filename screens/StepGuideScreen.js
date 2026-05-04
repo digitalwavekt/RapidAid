@@ -4,11 +4,11 @@
  */
 
 import React, { useState, useEffect, useRef } from 'react';
-import { 
-  View, 
-  Text, 
-  ScrollView, 
-  TouchableOpacity, 
+import {
+  View,
+  Text,
+  ScrollView,
+  TouchableOpacity,
   StyleSheet,
   SafeAreaView,
   Dimensions,
@@ -81,7 +81,7 @@ const StepGuideScreen = ({ route, navigation }) => {
 
   const handleComplete = () => {
     AudioService.stop();
-    navigation.navigate('EmergencyComplete', { 
+    navigation.navigate('EmergencyComplete', {
       emergencyId: emergency.id,
       emergencyTitle: title,
     });
@@ -96,7 +96,7 @@ const StepGuideScreen = ({ route, navigation }) => {
     <SafeAreaView style={styles.container}>
       {/* Header */}
       <View style={styles.header}>
-        <TouchableOpacity 
+        <TouchableOpacity
           style={styles.backButton}
           onPress={() => {
             AudioService.stop();
@@ -107,23 +107,24 @@ const StepGuideScreen = ({ route, navigation }) => {
         </TouchableOpacity>
         <View style={styles.headerCenter}>
           <Text style={styles.headerTitle} numberOfLines={1}>{title}</Text>
-          <ProgressBar 
-            current={currentStepIndex + 1} 
-            total={steps.length} 
+          <ProgressBar
+            current={currentStepIndex + 1}
+            total={steps.length}
           />
         </View>
-        <TouchableOpacity 
+        <TouchableOpacity
           style={styles.closeButton}
           onPress={() => {
             AudioService.stop();
-            navigation.navigate('Home');
+            // ✅ FIXED
+            navigation.navigate('MainTabs', { screen: 'Home' });
           }}
         >
           <MaterialCommunityIcons name="close" size={24} color={COLORS.textInverse} />
         </TouchableOpacity>
       </View>
 
-      <ScrollView 
+      <ScrollView
         ref={scrollViewRef}
         style={styles.scrollView}
         contentContainerStyle={styles.scrollContent}
@@ -150,8 +151,8 @@ const StepGuideScreen = ({ route, navigation }) => {
             <Text style={styles.reminderText}>
               {t('emergencyNumber')}: {emergencyNumber}
             </Text>
-            <EmergencyButton 
-              number={emergencyNumber} 
+            <EmergencyButton
+              number={emergencyNumber}
               label={t('callNow')}
               size="small"
             />
@@ -160,8 +161,8 @@ const StepGuideScreen = ({ route, navigation }) => {
           {/* Step Navigator */}
           <View style={styles.stepNavigator}>
             <Text style={styles.navigatorTitle}>{t('steps')}</Text>
-            <ScrollView 
-              horizontal 
+            <ScrollView
+              horizontal
               showsHorizontalScrollIndicator={false}
               contentContainerStyle={styles.stepList}
             >
@@ -196,10 +197,10 @@ const StepGuideScreen = ({ route, navigation }) => {
           onPress={handlePrevious}
           disabled={currentStepIndex === 0}
         >
-          <MaterialCommunityIcons 
-            name="chevron-left" 
-            size={24} 
-            color={currentStepIndex === 0 ? COLORS.textMuted : COLORS.primary} 
+          <MaterialCommunityIcons
+            name="chevron-left"
+            size={24}
+            color={currentStepIndex === 0 ? COLORS.textMuted : COLORS.primary}
           />
           <Text style={[styles.navText, currentStepIndex === 0 && styles.navTextDisabled]}>
             {t('previousStep')}

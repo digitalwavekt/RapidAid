@@ -4,10 +4,10 @@
  */
 
 import React from 'react';
-import { 
-  View, 
-  Text, 
-  TouchableOpacity, 
+import {
+  View,
+  Text,
+  TouchableOpacity,
   StyleSheet,
   SafeAreaView,
 } from 'react-native';
@@ -22,7 +22,8 @@ const EmergencyCompleteScreen = ({ route, navigation }) => {
   const { t } = useLanguage();
 
   const handleGoHome = () => {
-    navigation.navigate('Home');
+    // ✅ FIXED
+    navigation.navigate('MainTabs', { screen: 'Home' });
   };
 
   const handleCallEmergency = () => {
@@ -53,14 +54,14 @@ const EmergencyCompleteScreen = ({ route, navigation }) => {
 
         {/* Actions */}
         <View style={styles.actions}>
-          <EmergencyButton 
+          <EmergencyButton
             number="108"
             label="Call Ambulance"
             size="large"
             style={styles.emergencyButton}
           />
 
-          <TouchableOpacity 
+          <TouchableOpacity
             style={styles.homeButton}
             onPress={handleGoHome}
           >
