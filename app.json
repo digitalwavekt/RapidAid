@@ -28,7 +28,9 @@
       "versionCode": 1,
       "permissions": [
         "CALL_PHONE",
-        "READ_PHONE_STATE"
+        "READ_PHONE_STATE",
+        "android.permission.RECORD_AUDIO",
+        "android.permission.MODIFY_AUDIO_SETTINGS"
       ]
     },
     "web": {
@@ -41,6 +43,11 @@
           "microphonePermission": "Allow RapidAid to access your microphone for emergency voice guidance."
         }
       ]
-    ]
+    ],
+    "extra": {
+      "eas": {
+        "projectId": "5053509f-56a0-4ffb-a655-29e177d837f8"
+      }
+    }
   }
 }

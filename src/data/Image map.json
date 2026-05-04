@@ -1,0 +1,105 @@
+{
+    "version": "1.0.0",
+    "image_map": {
+        "heart_attack": {
+            "step_1": "assets/images/heart_attack/step_1.png",
+            "step_2": "assets/images/heart_attack/step_2.png",
+            "step_3": "assets/images/heart_attack/step_3.png"
+        },
+        "cpr": {
+            "step_1": "assets/images/cpr/step_1.png",
+            "step_2": "assets/images/cpr/step_2.png",
+            "step_3": "assets/images/cpr/step_3.png"
+        },
+        "choking": {
+            "step_1": "assets/images/choking/step_1.png",
+            "step_2": "assets/images/choking/step_2.png",
+            "step_3": "assets/images/choking/step_3.png"
+        },
+        "drowning": {
+            "step_1": "assets/images/drowning/step_1.png",
+            "step_2": "assets/images/drowning/step_2.png",
+            "step_3": "assets/images/drowning/step_3.png"
+        },
+        "burn": {
+            "step_1": "assets/images/burn/step_1.png",
+            "step_2": "assets/images/burn/step_2.png",
+            "step_3": "assets/images/burn/step_3.png"
+        },
+        "electric_shock": {
+            "step_1": "assets/images/electric_shock/step_1.png",
+            "step_2": "assets/images/electric_shock/step_2.png",
+            "step_3": "assets/images/electric_shock/step_3.png"
+        },
+        "snake_bite": {
+            "step_1": "assets/images/snake_bite/step_1.png",
+            "step_2": "assets/images/snake_bite/step_2.png",
+            "step_3": "assets/images/snake_bite/step_3.png"
+        },
+        "dog_bite": {
+            "step_1": "assets/images/dog_bite/step_1.png",
+            "step_2": "assets/images/dog_bite/step_2.png",
+            "step_3": "assets/images/dog_bite/step_3.png"
+        },
+        "poisoning": {
+            "step_1": "assets/images/poisoning/step_1.png",
+            "step_2": "assets/images/poisoning/step_2.png",
+            "step_3": "assets/images/poisoning/step_3.png"
+        },
+        "acid_attack": {
+            "step_1": "assets/images/acid_attack/step_1.png",
+            "step_2": "assets/images/acid_attack/step_2.png",
+            "step_3": "assets/images/acid_attack/step_3.png"
+        },
+        "fracture": {
+            "step_1": "assets/images/fracture/step_1.png",
+            "step_2": "assets/images/fracture/step_2.png",
+            "step_3": "assets/images/fracture/step_3.png"
+        },
+        "heavy_bleeding": {
+            "step_1": "assets/images/heavy_bleeding/step_1.png",
+            "step_2": "assets/images/heavy_bleeding/step_2.png",
+            "step_3": "assets/images/heavy_bleeding/step_3.png"
+        },
+        "seizure": {
+            "step_1": "assets/images/seizure/step_1.png",
+            "step_2": "assets/images/seizure/step_2.png",
+            "step_3": "assets/images/seizure/step_3.png"
+        },
+        "stroke": {
+            "step_1": "assets/images/stroke/step_1.png",
+            "step_2": "assets/images/stroke/step_2.png",
+            "step_3": "assets/images/stroke/step_3.png"
+        },
+        "heat_stroke": {
+            "step_1": "assets/images/heat_stroke/step_1.png",
+            "step_2": "assets/images/heat_stroke/step_2.png",
+            "step_3": "assets/images/heat_stroke/step_3.png"
+        },
+        "carbon_monoxide_suffocation": {
+            "step_1": "assets/images/carbon_monoxide_suffocation/step_1.png",
+            "step_2": "assets/images/carbon_monoxide_suffocation/step_2.png",
+            "step_3": "assets/images/carbon_monoxide_suffocation/step_3.png"
+        },
+        "road_accident": {
+            "step_1": "assets/images/road_accident/step_1.png",
+            "step_2": "assets/images/road_accident/step_2.png",
+            "step_3": "assets/images/road_accident/step_3.png"
+        },
+        "asthma_attack": {
+            "step_1": "assets/images/asthma_attack/step_1.png",
+            "step_2": "assets/images/asthma_attack/step_2.png",
+            "step_3": "assets/images/asthma_attack/step_3.png"
+        },
+        "pregnancy_emergency": {
+            "step_1": "assets/images/pregnancy_emergency/step_1.png",
+            "step_2": "assets/images/pregnancy_emergency/step_2.png",
+            "step_3": "assets/images/pregnancy_emergency/step_3.png"
+        },
+        "child_fever_seizure": {
+            "step_1": "assets/images/child_fever_seizure/step_1.png",
+            "step_2": "assets/images/child_fever_seizure/step_2.png",
+            "step_3": "assets/images/child_fever_seizure/step_3.png"
+        }
+    }
+}

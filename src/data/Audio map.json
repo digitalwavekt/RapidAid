@@ -1,0 +1,285 @@
+{
+    "version": "1.0.0",
+    "audio_map": {
+        "heart_attack": {
+            "step_1": {
+                "hi": "assets/audio/hi/heart_attack/step_1.mp3",
+                "en": "assets/audio/en/heart_attack/step_1.mp3"
+            },
+            "step_2": {
+                "hi": "assets/audio/hi/heart_attack/step_2.mp3",
+                "en": "assets/audio/en/heart_attack/step_2.mp3"
+            },
+            "step_3": {
+                "hi": "assets/audio/hi/heart_attack/step_3.mp3",
+                "en": "assets/audio/en/heart_attack/step_3.mp3"
+            }
+        },
+        "cpr": {
+            "step_1": {
+                "hi": "assets/audio/hi/cpr/step_1.mp3",
+                "en": "assets/audio/en/cpr/step_1.mp3"
+            },
+            "step_2": {
+                "hi": "assets/audio/hi/cpr/step_2.mp3",
+                "en": "assets/audio/en/cpr/step_2.mp3"
+            },
+            "step_3": {
+                "hi": "assets/audio/hi/cpr/step_3.mp3",
+                "en": "assets/audio/en/cpr/step_3.mp3"
+            }
+        },
+        "choking": {
+            "step_1": {
+                "hi": "assets/audio/hi/choking/step_1.mp3",
+                "en": "assets/audio/en/choking/step_1.mp3"
+            },
+            "step_2": {
+                "hi": "assets/audio/hi/choking/step_2.mp3",
+                "en": "assets/audio/en/choking/step_2.mp3"
+            },
+            "step_3": {
+                "hi": "assets/audio/hi/choking/step_3.mp3",
+                "en": "assets/audio/en/choking/step_3.mp3"
+            }
+        },
+        "drowning": {
+            "step_1": {
+                "hi": "assets/audio/hi/drowning/step_1.mp3",
+                "en": "assets/audio/en/drowning/step_1.mp3"
+            },
+            "step_2": {
+                "hi": "assets/audio/hi/drowning/step_2.mp3",
+                "en": "assets/audio/en/drowning/step_2.mp3"
+            },
+            "step_3": {
+                "hi": "assets/audio/hi/drowning/step_3.mp3",
+                "en": "assets/audio/en/drowning/step_3.mp3"
+            }
+        },
+        "burn": {
+            "step_1": {
+                "hi": "assets/audio/hi/burn/step_1.mp3",
+                "en": "assets/audio/en/burn/step_1.mp3"
+            },
+            "step_2": {
+                "hi": "assets/audio/hi/burn/step_2.mp3",
+                "en": "assets/audio/en/burn/step_2.mp3"
+            },
+            "step_3": {
+                "hi": "assets/audio/hi/burn/step_3.mp3",
+                "en": "assets/audio/en/burn/step_3.mp3"
+            }
+        },
+        "electric_shock": {
+            "step_1": {
+                "hi": "assets/audio/hi/electric_shock/step_1.mp3",
+                "en": "assets/audio/en/electric_shock/step_1.mp3"
+            },
+            "step_2": {
+                "hi": "assets/audio/hi/electric_shock/step_2.mp3",
+                "en": "assets/audio/en/electric_shock/step_2.mp3"
+            },
+            "step_3": {
+                "hi": "assets/audio/hi/electric_shock/step_3.mp3",
+                "en": "assets/audio/en/electric_shock/step_3.mp3"
+            }
+        },
+        "snake_bite": {
+            "step_1": {
+                "hi": "assets/audio/hi/snake_bite/step_1.mp3",
+                "en": "assets/audio/en/snake_bite/step_1.mp3"
+            },
+            "step_2": {
+                "hi": "assets/audio/hi/snake_bite/step_2.mp3",
+                "en": "assets/audio/en/snake_bite/step_2.mp3"
+            },
+            "step_3": {
+                "hi": "assets/audio/hi/snake_bite/step_3.mp3",
+                "en": "assets/audio/en/snake_bite/step_3.mp3"
+            }
+        },
+        "dog_bite": {
+            "step_1": {
+                "hi": "assets/audio/hi/dog_bite/step_1.mp3",
+                "en": "assets/audio/en/dog_bite/step_1.mp3"
+            },
+            "step_2": {
+                "hi": "assets/audio/hi/dog_bite/step_2.mp3",
+                "en": "assets/audio/en/dog_bite/step_2.mp3"
+            },
+            "step_3": {
+                "hi": "assets/audio/hi/dog_bite/step_3.mp3",
+                "en": "assets/audio/en/dog_bite/step_3.mp3"
+            }
+        },
+        "poisoning": {
+            "step_1": {
+                "hi": "assets/audio/hi/poisoning/step_1.mp3",
+                "en": "assets/audio/en/poisoning/step_1.mp3"
+            },
+            "step_2": {
+                "hi": "assets/audio/hi/poisoning/step_2.mp3",
+                "en": "assets/audio/en/poisoning/step_2.mp3"
+            },
+            "step_3": {
+                "hi": "assets/audio/hi/poisoning/step_3.mp3",
+                "en": "assets/audio/en/poisoning/step_3.mp3"
+            }
+        },
+        "acid_attack": {
+            "step_1": {
+                "hi": "assets/audio/hi/acid_attack/step_1.mp3",
+                "en": "assets/audio/en/acid_attack/step_1.mp3"
+            },
+            "step_2": {
+                "hi": "assets/audio/hi/acid_attack/step_2.mp3",
+                "en": "assets/audio/en/acid_attack/step_2.mp3"
+            },
+            "step_3": {
+                "hi": "assets/audio/hi/acid_attack/step_3.mp3",
+                "en": "assets/audio/en/acid_attack/step_3.mp3"
+            }
+        },
+        "fracture": {
+            "step_1": {
+                "hi": "assets/audio/hi/fracture/step_1.mp3",
+                "en": "assets/audio/en/fracture/step_1.mp3"
+            },
+            "step_2": {
+                "hi": "assets/audio/hi/fracture/step_2.mp3",
+                "en": "assets/audio/en/fracture/step_2.mp3"
+            },
+            "step_3": {
+                "hi": "assets/audio/hi/fracture/step_3.mp3",
+                "en": "assets/audio/en/fracture/step_3.mp3"
+            }
+        },
+        "heavy_bleeding": {
+            "step_1": {
+                "hi": "assets/audio/hi/heavy_bleeding/step_1.mp3",
+                "en": "assets/audio/en/heavy_bleeding/step_1.mp3"
+            },
+            "step_2": {
+                "hi": "assets/audio/hi/heavy_bleeding/step_2.mp3",
+                "en": "assets/audio/en/heavy_bleeding/step_2.mp3"
+            },
+            "step_3": {
+                "hi": "assets/audio/hi/heavy_bleeding/step_3.mp3",
+                "en": "assets/audio/en/heavy_bleeding/step_3.mp3"
+            }
+        },
+        "seizure": {
+            "step_1": {
+                "hi": "assets/audio/hi/seizure/step_1.mp3",
+                "en": "assets/audio/en/seizure/step_1.mp3"
+            },
+            "step_2": {
+                "hi": "assets/audio/hi/seizure/step_2.mp3",
+                "en": "assets/audio/en/seizure/step_2.mp3"
+            },
+            "step_3": {
+                "hi": "assets/audio/hi/seizure/step_3.mp3",
+                "en": "assets/audio/en/seizure/step_3.mp3"
+            }
+        },
+        "stroke": {
+            "step_1": {
+                "hi": "assets/audio/hi/stroke/step_1.mp3",
+                "en": "assets/audio/en/stroke/step_1.mp3"
+            },
+            "step_2": {
+                "hi": "assets/audio/hi/stroke/step_2.mp3",
+                "en": "assets/audio/en/stroke/step_2.mp3"
+            },
+            "step_3": {
+                "hi": "assets/audio/hi/stroke/step_3.mp3",
+                "en": "assets/audio/en/stroke/step_3.mp3"
+            }
+        },
+        "heat_stroke": {
+            "step_1": {
+                "hi": "assets/audio/hi/heat_stroke/step_1.mp3",
+                "en": "assets/audio/en/heat_stroke/step_1.mp3"
+            },
+            "step_2": {
+                "hi": "assets/audio/hi/heat_stroke/step_2.mp3",
+                "en": "assets/audio/en/heat_stroke/step_2.mp3"
+            },
+            "step_3": {
+                "hi": "assets/audio/hi/heat_stroke/step_3.mp3",
+                "en": "assets/audio/en/heat_stroke/step_3.mp3"
+            }
+        },
+        "carbon_monoxide_suffocation": {
+            "step_1": {
+                "hi": "assets/audio/hi/carbon_monoxide_suffocation/step_1.mp3",
+                "en": "assets/audio/en/carbon_monoxide_suffocation/step_1.mp3"
+            },
+            "step_2": {
+                "hi": "assets/audio/hi/carbon_monoxide_suffocation/step_2.mp3",
+                "en": "assets/audio/en/carbon_monoxide_suffocation/step_2.mp3"
+            },
+            "step_3": {
+                "hi": "assets/audio/hi/carbon_monoxide_suffocation/step_3.mp3",
+                "en": "assets/audio/en/carbon_monoxide_suffocation/step_3.mp3"
+            }
+        },
+        "road_accident": {
+            "step_1": {
+                "hi": "assets/audio/hi/road_accident/step_1.mp3",
+                "en": "assets/audio/en/road_accident/step_1.mp3"
+            },
+            "step_2": {
+                "hi": "assets/audio/hi/road_accident/step_2.mp3",
+                "en": "assets/audio/en/road_accident/step_2.mp3"
+            },
+            "step_3": {
+                "hi": "assets/audio/hi/road_accident/step_3.mp3",
+                "en": "assets/audio/en/road_accident/step_3.mp3"
+            }
+        },
+        "asthma_attack": {
+            "step_1": {
+                "hi": "assets/audio/hi/asthma_attack/step_1.mp3",
+                "en": "assets/audio/en/asthma_attack/step_1.mp3"
+            },
+            "step_2": {
+                "hi": "assets/audio/hi/asthma_attack/step_2.mp3",
+                "en": "assets/audio/en/asthma_attack/step_2.mp3"
+            },
+            "step_3": {
+                "hi": "assets/audio/hi/asthma_attack/step_3.mp3",
+                "en": "assets/audio/en/asthma_attack/step_3.mp3"
+            }
+        },
+        "pregnancy_emergency": {
+            "step_1": {
+                "hi": "assets/audio/hi/pregnancy_emergency/step_1.mp3",
+                "en": "assets/audio/en/pregnancy_emergency/step_1.mp3"
+            },
+            "step_2": {
+                "hi": "assets/audio/hi/pregnancy_emergency/step_2.mp3",
+                "en": "assets/audio/en/pregnancy_emergency/step_2.mp3"
+            },
+            "step_3": {
+                "hi": "assets/audio/hi/pregnancy_emergency/step_3.mp3",
+                "en": "assets/audio/en/pregnancy_emergency/step_3.mp3"
+            }
+        },
+        "child_fever_seizure": {
+            "step_1": {
+                "hi": "assets/audio/hi/child_fever_seizure/step_1.mp3",
+                "en": "assets/audio/en/child_fever_seizure/step_1.mp3"
+            },
+            "step_2": {
+                "hi": "assets/audio/hi/child_fever_seizure/step_2.mp3",
+                "en": "assets/audio/en/child_fever_seizure/step_2.mp3"
+            },
+            "step_3": {
+                "hi": "assets/audio/hi/child_fever_seizure/step_3.mp3",
+                "en": "assets/audio/en/child_fever_seizure/step_3.mp3"
+            }
+        }
+    }
+}
