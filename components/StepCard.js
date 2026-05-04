@@ -1,19 +1,48 @@
 /**
- * RapidAid - StepCard Component
- * Displays individual emergency step with audio controls
+ * RapidAid - StepCard Component (FIXED)
+ * Displays individual emergency step with audio and image
  */
 
 import React, { useState, useEffect } from 'react';
-import { View, Text, TouchableOpacity, StyleSheet } from 'react-native';
+import { View, Text, TouchableOpacity, StyleSheet, Image } from 'react-native';  // ✅ Added Image import
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 import { COLORS, SPACING, BORDER_RADIUS, SHADOWS, FONTS } from '../styles/theme';
 import { useLanguage } from '../context/LanguageContext';
 import { getLocalizedText } from '../utils/helpers';
 import AudioService from '../services/audioService';
 
-const StepCard = ({ 
-  step, 
-  stepNumber, 
+// 🖼️ IMAGE ASSET REGISTRY - Map image names to require() statements
+// Add all your step images here as you add them to assets/images/
+const IMAGE_ASSETS = {
+  // Heart Attack Steps
+  'step1_call': require('../../assets/images/steps/step1_call.png'),
+  'step2_comfort': require('../../assets/images/steps/step2_comfort.png'),
+  'step3_aspirin': require('../../assets/images/steps/step3_aspirin.png'),
+  'step4_breathing': require('../../assets/images/steps/step4_breathing.png'),
+  'step5_calm': require('../../assets/images/steps/step5_calm.png'),
+
+  // Snake Bite Steps
+  'step1_calm': require('../../assets/images/steps/step1_calm.png'),
+  'step2_remove': require('../../assets/images/steps/step2_remove.png'),
+  'step3_position': require('../../assets/images/steps/step3_position.png'),
+  'step4_clean': require('../../assets/images/steps/step4_clean.png'),
+  'step5_bandage': require('../../assets/images/steps/step5_bandage.png'),
+  'step6_ambulance': require('../../assets/images/steps/step6_ambulance.png'),
+
+  // Drowning Steps
+  'step1_safety': require('../../assets/images/steps/step1_safety.png'),
+  'step2_pull': require('../../assets/images/steps/step2_pull.png'),
+  'step3_check': require('../../assets/images/steps/step3_check.png'),
+  'step4_cpr': require('../../assets/images/steps/step4_cpr.png'),
+  'step5_recovery': require('../../assets/images/steps/step5_recovery.png'),
+  'step6_monitor': require('../../assets/images/steps/step6_monitor.png'),
+
+  // Add more step images here...
+};
+
+const StepCard = ({
+  step,
+  stepNumber,
   totalSteps,
   isActive = false,
   onNext,
@@ -24,6 +53,7 @@ const StepCard = ({
   const { language, t } = useLanguage();
   const [isPlaying, setIsPlaying] = useState(false);
   const [hasPlayed, setHasPlayed] = useState(false);
+  const [imageError, setImageError] = useState(false);  // ✅ Track image load errors
 
   const title = getLocalizedText(step.title, language);
   const description = getLocalizedText(step.description, language);
@@ -43,9 +73,13 @@ const StepCard = ({
   const playAudio = async () => {
     setIsPlaying(true);
     setHasPlayed(true);
-    await AudioService.playStepAudio(step.audio, () => {
+    const success = await AudioService.playStepAudio(step.audio, () => {
       setIsPlaying(false);
     });
+    // ✅ FIX: Handle audio load failure
+    if (!success) {
+      setIsPlaying(false);
+    }
   };
 
   const pauseAudio = async () => {
@@ -55,9 +89,12 @@ const StepCard = ({
 
   const replayAudio = async () => {
     setIsPlaying(true);
-    await AudioService.replay(() => {
+    const success = await AudioService.replay(() => {
       setIsPlaying(false);
     });
+    if (!success) {
+      setIsPlaying(false);
+    }
   };
 
   const handleAudioPress = () => {
@@ -69,6 +106,16 @@ const StepCard = ({
       playAudio();
     }
   };
+
+  // ✅ FIXED: Get image source from registry
+  const getImageSource = () => {
+    if (step.image && IMAGE_ASSETS[step.image]) {
+      return IMAGE_ASSETS[step.image];
+    }
+    return null;
+  };
+
+  const imageSource = getImageSource();
 
   return (
     <View style={[styles.container, isActive && styles.activeContainer]}>
@@ -86,15 +133,15 @@ const StepCard = ({
 
         {/* Audio Control */}
         {step.audio && (
-          <TouchableOpacity 
+          <TouchableOpacity
             style={styles.audioButton}
             onPress={handleAudioPress}
-            accessibilityLabel={isPlaying ? 'Pause audio' : 'Play audio'}
+            accessibilityLabel={isPlaying ? t('pauseAudio') : t('playAudio')}
           >
-            <MaterialCommunityIcons 
-              name={isPlaying ? 'pause-circle' : hasPlayed ? 'replay' : 'play-circle'} 
-              size={36} 
-              color={COLORS.primary} 
+            <MaterialCommunityIcons
+              name={isPlaying ? 'pause-circle' : hasPlayed ? 'replay' : 'play-circle'}
+              size={40}
+              color={COLORS.primary}
             />
           </TouchableOpacity>
         )}
@@ -102,17 +149,31 @@ const StepCard = ({
 
       {/* Step Content */}
       <View style={styles.content}>
-        {/* Placeholder for step image/animation */}
-        <View style={styles.imagePlaceholder}>
-          <MaterialCommunityIcons 
-            name="image-outline" 
-            size={48} 
-            color={COLORS.textMuted} 
+        {/* ✅ FIXED: Actual Image Rendering */}
+        {imageSource && !imageError ? (
+          <Image
+            source={imageSource}
+            style={styles.stepImage}
+            resizeMode="contain"
+            onError={() => {
+              console.warn(`Failed to load image: ${step.image}`);
+              setImageError(true);
+            }}
+            accessibilityLabel={t('stepImage')}
           />
-          <Text style={styles.imagePlaceholderText}>
-            {step.image}
-          </Text>
-        </View>
+        ) : (
+          /* Fallback placeholder when image is missing */
+          <View style={styles.imagePlaceholder}>
+            <MaterialCommunityIcons
+              name={imageError ? "image-broken" : "image"}
+              size={48}
+              color={COLORS.textMuted}
+            />
+            <Text style={styles.imagePlaceholderText}>
+              {imageError ? t('imageLoadError') : step.image}
+            </Text>
+          </View>
+        )}
 
         <Text style={styles.description}>{description}</Text>
       </View>
@@ -123,12 +184,11 @@ const StepCard = ({
           style={[styles.navButton, stepNumber === 1 && styles.navButtonDisabled]}
           onPress={onPrevious}
           disabled={stepNumber === 1}
-          accessibilityLabel="Previous step"
         >
-          <MaterialCommunityIcons 
-            name="chevron-left" 
-            size={24} 
-            color={stepNumber === 1 ? COLORS.textMuted : COLORS.primary} 
+          <MaterialCommunityIcons
+            name="chevron-left"
+            size={24}
+            color={stepNumber === 1 ? COLORS.textMuted : COLORS.primary}
           />
           <Text style={[styles.navText, stepNumber === 1 && styles.navTextDisabled]}>
             {t('previousStep')}
@@ -137,7 +197,7 @@ const StepCard = ({
 
         <View style={styles.progressDots}>
           {Array.from({ length: totalSteps }).map((_, index) => (
-            <View 
+            <View
               key={index}
               style={[
                 styles.dot,
@@ -149,18 +209,25 @@ const StepCard = ({
         </View>
 
         <TouchableOpacity
-          style={[styles.navButton, stepNumber === totalSteps && styles.navButtonComplete]}
+          style={[
+            styles.navButton,
+            stepNumber === totalSteps && styles.navButtonComplete,
+          ]}
           onPress={stepNumber === totalSteps ? onComplete : onNext}
-          accessibilityLabel={stepNumber === totalSteps ? 'Complete guide' : 'Next step'}
         >
-          <Text style={[styles.navText, stepNumber === totalSteps && styles.navTextComplete]}>
+          <Text
+            style={[
+              styles.navText,
+              stepNumber === totalSteps && styles.navTextComplete,
+            ]}
+          >
             {stepNumber === totalSteps ? t('close') : t('nextStep')}
           </Text>
           {stepNumber !== totalSteps && (
-            <MaterialCommunityIcons 
-              name="chevron-right" 
-              size={24} 
-              color={COLORS.primary} 
+            <MaterialCommunityIcons
+              name="chevron-right"
+              size={24}
+              color={COLORS.primary}
             />
           )}
         </TouchableOpacity>
@@ -219,6 +286,14 @@ const styles = StyleSheet.create({
   },
   content: {
     marginBottom: SPACING.lg,
+  },
+  // ✅ FIXED: Added actual image styles
+  stepImage: {
+    width: '100%',
+    height: 200,
+    borderRadius: BORDER_RADIUS.md,
+    marginBottom: SPACING.lg,
+    backgroundColor: COLORS.surface,
   },
   imagePlaceholder: {
     height: 180,

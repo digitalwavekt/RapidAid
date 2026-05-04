@@ -1,17 +1,17 @@
 /**
- * RapidAid - SettingsScreen
+ * RapidAid - SettingsScreen (FIXED)
  * App settings, language, and about
  */
 
 import React from 'react';
-import { 
-  View, 
-  Text, 
-  ScrollView, 
-  TouchableOpacity, 
+import {
+  View,
+  Text,
+  ScrollView,
+  TouchableOpacity,
   StyleSheet,
   SafeAreaView,
-  Linking,
+  Switch,  // ✅ FIXED: Import Switch for proper toggle
 } from 'react-native';
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 import { COLORS, SPACING, BORDER_RADIUS, SHADOWS, FONTS } from '../styles/theme';
@@ -27,8 +27,10 @@ const SettingsScreen = ({ navigation }) => {
     setLanguage(lang);
   };
 
+  // ✅ FIXED: Proper toggle with Switch component
   const handleToggleSetting = (key) => {
-    setSettings({ [key]: !settings[key] });
+    const newValue = !settings[key];
+    setSettings({ [key]: newValue });
   };
 
   const settingsSections = [
@@ -56,14 +58,14 @@ const SettingsScreen = ({ navigation }) => {
       items: [
         {
           icon: 'volume-high',
-          label: 'Auto-play Audio',
+          label: t('autoPlayAudio') || 'Auto-play Audio',
           value: settings.autoPlayAudio,
           onPress: () => handleToggleSetting('autoPlayAudio'),
           type: 'toggle',
         },
         {
           icon: 'vibrate',
-          label: 'Haptic Feedback',
+          label: t('hapticFeedback') || 'Haptic Feedback',
           value: settings.hapticFeedback,
           onPress: () => handleToggleSetting('hapticFeedback'),
           type: 'toggle',
@@ -106,21 +108,26 @@ const SettingsScreen = ({ navigation }) => {
       key={item.label}
       style={styles.settingItem}
       onPress={item.onPress}
+      activeOpacity={item.type === 'toggle' ? 1 : 0.7}  // ✅ Don't fade for toggle (Switch handles it)
     >
       <View style={styles.settingItemLeft}>
-        <MaterialCommunityIcons 
-          name={item.icon} 
-          size={22} 
-          color={COLORS.primary} 
+        <MaterialCommunityIcons
+          name={item.icon}
+          size={22}
+          color={COLORS.primary}
           style={styles.settingIcon}
         />
         <Text style={styles.settingLabel}>{item.label}</Text>
       </View>
 
+      {/* ✅ FIXED: Use Switch component for toggles */}
       {item.type === 'toggle' && (
-        <View style={[styles.toggle, item.value && styles.toggleActive]}>
-          <View style={[styles.toggleDot, item.value && styles.toggleDotActive]} />
-        </View>
+        <Switch
+          value={item.value}
+          onValueChange={item.onPress}
+          trackColor={{ false: COLORS.border, true: COLORS.primary + '80' }}
+          thumbColor={item.value ? COLORS.primary : COLORS.background}
+        />
       )}
 
       {item.type === 'radio' && (
@@ -130,7 +137,7 @@ const SettingsScreen = ({ navigation }) => {
       )}
 
       {item.type === 'navigate' && (
-        <MaterialCommunityIcons name="chevron-right" size={20} color={COLORS.textMuted} />
+        <MaterialCommunityIcons name="chevron-right" size={22} color={COLORS.textMuted} />
       )}
     </TouchableOpacity>
   );
@@ -139,30 +146,21 @@ const SettingsScreen = ({ navigation }) => {
     <SafeAreaView style={styles.container}>
       {/* Header */}
       <View style={styles.header}>
-        <TouchableOpacity 
-          style={styles.backButton}
-          onPress={() => navigation.goBack()}
-        >
+        <TouchableOpacity style={styles.backButton} onPress={() => navigation.goBack()}>
           <MaterialCommunityIcons name="arrow-left" size={24} color={COLORS.textInverse} />
         </TouchableOpacity>
         <Text style={styles.headerTitle}>{t('settings')}</Text>
         <View style={styles.headerRight} />
       </View>
 
-      <ScrollView 
-        style={styles.scrollView}
-        contentContainerStyle={styles.scrollContent}
-        showsVerticalScrollIndicator={false}
-      >
+      <ScrollView style={styles.scrollView} contentContainerStyle={styles.scrollContent}>
         {/* Profile Summary */}
         <View style={styles.profileSummary}>
           <View style={styles.profileAvatar}>
-            <MaterialCommunityIcons name="account" size={32} color={COLORS.textInverse} />
+            <MaterialCommunityIcons name="account" size={28} color={COLORS.textInverse} />
           </View>
           <View style={styles.profileInfo}>
-            <Text style={styles.profileName}>
-              {medicalProfile?.name || 'Guest User'}
-            </Text>
+            <Text style={styles.profileName}>{medicalProfile?.name || 'Guest User'}</Text>
             <Text style={styles.profileDetail}>
               {emergencyContacts?.length || 0} emergency contacts
             </Text>
@@ -181,7 +179,7 @@ const SettingsScreen = ({ navigation }) => {
 
         {/* Offline Badge */}
         <View style={styles.offlineBadge}>
-          <MaterialCommunityIcons name="wifi-off" size={20} color={COLORS.success} />
+          <MaterialCommunityIcons name="wifi-off" size={24} color={COLORS.success} />
           <View style={styles.offlineTextContainer}>
             <Text style={styles.offlineTitle}>{t('offlineReady')}</Text>
             <Text style={styles.offlineSubtitle}>{t('allContentAvailable')}</Text>
@@ -294,26 +292,6 @@ const styles = StyleSheet.create({
   settingLabel: {
     fontSize: FONTS.sizes.base,
     color: COLORS.textPrimary,
-  },
-  toggle: {
-    width: 50,
-    height: 28,
-    borderRadius: 14,
-    backgroundColor: COLORS.border,
-    padding: 2,
-  },
-  toggleActive: {
-    backgroundColor: COLORS.primary,
-  },
-  toggleDot: {
-    width: 24,
-    height: 24,
-    borderRadius: 12,
-    backgroundColor: COLORS.background,
-    transform: [{ translateX: 0 }],
-  },
-  toggleDotActive: {
-    transform: [{ translateX: 22 }],
   },
   radio: {
     width: 22,
